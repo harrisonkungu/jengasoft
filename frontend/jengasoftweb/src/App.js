@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function App() {
   const [formData, setFormData] = useState({
@@ -23,12 +23,20 @@ function App() {
     alert('Form submitted! Check console for details.');
   };
 
+  // Expose a global function to receive OTP from Android
+  useEffect(() => {
+    window.setOtpFromNative = (otp) => {
+      setFormData(prev => ({
+        ...prev,
+        otp: otp
+      }));
+    }
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
-
         <form onSubmit={handleSubmit} className="form-container">
-         
           <input
             type="text"
             name="otp"
@@ -38,7 +46,6 @@ function App() {
             maxLength={6} 
             required
           />
-
           <button type="submit">Submit</button>
         </form>
       </header>
