@@ -42,11 +42,11 @@ function App() {
             name="otp"
             value={formData.otp}
             onChange={handleChange}
-            placeholder="Enter your OTP."
+            placeholder="Enter your OTP"
             maxLength={6} 
             required
           />
-          <button type="submit">Submit</button>
+          <button type="submit">Ok</button>
         </form>
       </header>
     </div>
