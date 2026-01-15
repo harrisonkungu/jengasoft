@@ -28,30 +28,7 @@ function App() {
       <header className="App-header">
 
         <form onSubmit={handleSubmit} className="form-container">
-          <h2>OTP LISTENER</h2>
-
-          <label>Name</label>
-          <input
-            type="text"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            placeholder="Enter your name"
-            required
-          />
-
-          <label>Email</label>
-          <input
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            placeholder="Enter your email"
-            required
-          />
-
-          {/* OTP Field */}
-          <label>OTP</label>
+         
           <input
             type="text"
             name="otp"

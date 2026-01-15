@@ -68,14 +68,18 @@
 }
 
 .form-container {
-  background: #1b3a1e;
-  padding: 30px;
-  border-radius: 15px;
-  max-width: 400px;
-  margin: 20px auto;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
-  text-align: left;
-  transition: all 0.3s ease;
+    background: #1b3a1e;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 400px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: inherit;
+    width: 100%;
 }
 
 .form-container:hover {
@@ -90,14 +94,13 @@
 
 .form-container label {
   display: block;
-  margin-bottom: 5px;
   font-weight: bold;
   color: #f0f0f0;
 }
 
 .form-container input,
 .form-container textarea {
-  width: 100%;
+  width: 80%;
   padding: 12px;
   margin-bottom: 15px;
   border-radius: 8px;
